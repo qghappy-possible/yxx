@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录 - 梦想家居定制</title>
+    <link rel="shortcut icon" href="ww.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="梦想家居">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="products.html">产品展示</a></li>
+                <li><a href="customize.html">在线定制</a></li>
+                <li><a href="gallery.html">案例展示</a></li>
+                <li><a href="cart.html">购物车</a></li>
+                <li><a href="login.html" class="active">登录</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="login-main">
+        <div class="login-container">
+            <div class="message-box" id="messageBox">
+                <div class="message-content">
+                    <span class="message-text"></span>
+                    <div class="message-icon"></div>
+                </div>
+            </div>
+            <div class="login-box">
+                <h1>用户登录</h1>
+                <div class="login-tabs">
+                    <button class="tab-btn active" data-tab="login">登录</button>
+                    <button class="tab-btn" data-tab="register">注册</button>
+                </div>
+
+                <!-- 登录表单 -->
+                <form id="loginForm" class="login-form active" onsubmit="return handleLogin(event)">
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" id="password" name="password" required>
+                        <a href="#" class="forgot-password">忘记密码？</a>
+                    </div>
+                    <div class="form-group remember-me">
+                        <label>
+                            <input type="checkbox" name="remember"> 记住我
+                        </label>
+                    </div>
+                    <button type="submit" class="login-btn">登录</button>
+                </form>
+
+                <!-- 注册表单 -->
+                <form id="registerForm" class="login-form" onsubmit="return handleRegister(event)">
+                    <div class="form-group">
+                        <label for="reg-username">用户名</label>
+                        <input type="text" id="reg-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">电子邮箱</label>
+                        <input type="email" id="reg-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">密码</label>
+                        <input type="password" id="reg-password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-confirm-password">确认密码</label>
+                        <input type="password" id="reg-confirm-password" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="login-btn">注册</button>
+                </form>
+
+                <div class="third-party-login">
+                    <p>其他登录方式</p>
+                    <div class="login-options">
+                        <a href="#" class="third-party-btn wechat">
+                            <img src="images/icons/wechat.png" alt="微信登录">
+                            <span>微信登录</span>
+                        </a>
+                        <a href="#" class="third-party-btn qq">
+                            <img src="images/icons/qq.png" alt="QQ登录">
+                            <span>QQ登录</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>电话：400-123-4567</p>
+                <p>邮箱：contact@dreamhome.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <div class="social-links">
+                    <!-- 社交媒体图标 -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 梦想家居定制. 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html> 

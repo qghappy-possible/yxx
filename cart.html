@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车 - 梦想家居定制</title>
+    <link rel="shortcut icon" href="ww.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="梦想家居">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="products.html">产品展示</a></li>
+                <li><a href="customize.html">在线定制</a></li>
+                <li><a href="gallery.html">案例展示</a></li>
+                <li><a href="cart.html" class="active">购物车</a></li>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-main">
+        <div class="cart-container">
+            <h1>购物车</h1>
+            
+            <div class="cart-content">
+                <div class="cart-items">
+                    <div id="cart-item-list">
+                        <div class="cart-item">
+                            <img src="images/products/bed-modern.jpg" alt="现代简约双人床">
+                            <div class="item-info">
+                                <h3>现代简约双人床</h3>
+                                <p class="price">¥2999</p>
+                                <p class="specs">规格：1.8米</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button onclick="updateQuantity(1, -1)">-</button>
+                                <span>1</span>
+                                <button onclick="updateQuantity(1, 1)">+</button>
+                            </div>
+                            <button class="remove-item" onclick="removeItem(1)">删除</button>
+                        </div>
+
+                        <div class="cart-item">
+                            <img src="images/products/wardrobe-nordic.jpg" alt="北欧风格衣柜">
+                            <div class="item-info">
+                                <h3>北欧风格衣柜</h3>
+                                <p class="price">¥3599</p>
+                                <p class="specs">规格：四门</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button onclick="updateQuantity(2, -1)">-</button>
+                                <span>1</span>
+                                <button onclick="updateQuantity(2, 1)">+</button>
+                            </div>
+                            <button class="remove-item" onclick="removeItem(2)">删除</button>
+                        </div>
+
+                        <div class="cart-item">
+                            <img src="images/products/sofa-modern.jpg" alt="现代布艺沙发">
+                            <div class="item-info">
+                                <h3>现代布艺沙发</h3>
+                                <p class="price">¥4999</p>
+                                <p class="specs">颜色：浅灰色</p>
+                            </div>
+                            <div class="quantity-controls">
+                                <button onclick="updateQuantity(3, -1)">-</button>
+                                <span>1</span>
+                                <button onclick="updateQuantity(3, 1)">+</button>
+                            </div>
+                            <button class="remove-item" onclick="removeItem(3)">删除</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <h2>订单摘要</h2>
+                    <div class="summary-item">
+                        <span>商品总额</span>
+                        <span id="subtotal">¥0.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>运费</span>
+                        <span id="shipping">¥0.00</span>
+                    </div>
+                    <div class="summary-item discount">
+                        <span>优惠折扣</span>
+                        <span id="discount">-¥0.00</span>
+                    </div>
+                    <div class="summary-total">
+                        <span>应付总额</span>
+                        <span id="total">¥0.00</span>
+                    </div>
+                    <div class="coupon-input">
+                        <input type="text" placeholder="输入优惠码">
+                        <button onclick="applyCoupon()">应用</button>
+                    </div>
+                    <button class="checkout-btn" onclick="proceedToCheckout()">
+                        立即结算
+                    </button>
+                </div>
+            </div>
+
+            <div class="empty-cart" style="display: none;">
+                <img src="images/empty-cart.png" alt="空购物车">
+                <p>您的购物车还是空的</p>
+                <a href="products.html" class="continue-shopping">继续购物</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>电话：400-123-4567</p>
+                <p>邮箱：contact@dreamhome.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <div class="social-links">
+                    <!-- 社交媒体图标 -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 梦想家居定制. 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html> 

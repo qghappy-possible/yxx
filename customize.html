@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线定制 - 梦想家居定制</title>
+    <link rel="shortcut icon" href="ww.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/customize.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="梦想家居">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="products.html">产品展示</a></li>
+                <li><a href="customize.html" class="active">在线定制</a></li>
+                <li><a href="gallery.html">案例展示</a></li>
+                <li><a href="cart.html">购物车</a></li>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="customize-main">
+        <div class="customize-container">
+            <h1>个性化定制</h1>
+            <div class="customize-steps">
+                <div class="step active" data-step="1" onclick="customizeForm.goToStep(1)">
+                    <span class="step-number">1</span>
+                    <span class="step-text">选择房间</span>
+                </div>
+                <div class="step" data-step="2" onclick="customizeForm.goToStep(2)">
+                    <span class="step-number">2</span>
+                    <span class="step-text">风格选择</span>
+                </div>
+                <div class="step" data-step="3" onclick="customizeForm.goToStep(3)">
+                    <span class="step-number">3</span>
+                    <span class="step-text">尺寸布局</span>
+                </div>
+                <div class="step" data-step="4" onclick="customizeForm.goToStep(4)">
+                    <span class="step-number">4</span>
+                    <span class="step-text">材料选择</span>
+                </div>
+                <div class="step" data-step="5" onclick="customizeForm.goToStep(5)">
+                    <span class="step-number">5</span>
+                    <span class="step-text">确认订单</span>
+                </div>
+            </div>
+
+            <div class="customize-content">
+                <!-- 步骤1：选择房间 -->
+                <div class="step-content active" id="step1">
+                    <h2>选择需要定制的房间</h2>
+                    <div class="room-grid">
+                        <div class="room-option" data-room="living">
+                            <img src="images/rooms/living.jpg" alt="客厅">
+                            <h3>客厅</h3>
+                            <div class="room-examples">
+                                <div class="example-item">
+                                    <img src="images/examples/living-modern.jpg" alt="现代客厅">
+                                    <span>现代简约</span>
+                                </div>
+                                <div class="example-item">
+                                    <img src="images/examples/living-nordic.jpg" alt="北欧客厅">
+                                    <span>北欧风格</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-option" data-room="bedroom">
+                            <img src="images/rooms/bedroom.jpg" alt="卧室">
+                            <h3>卧室</h3>
+                            <div class="room-examples">
+                                <div class="example-item">
+                                    <img src="images/examples/bedroom-modern.jpg" alt="现代卧室">
+                                    <span>现代简约</span>
+                                </div>
+                                <div class="example-item">
+                                    <img src="images/examples/bedroom-chinese.jpg" alt="中式卧室">
+                                    <span>新中式</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-option" data-room="kitchen">
+                            <img src="images/rooms/kitchen.jpg" alt="厨房">
+                            <h3>厨房</h3>
+                            <div class="room-examples">
+                                <div class="example-item">
+                                    <img src="images/examples/kitchen-modern.jpg" alt="现代厨房">
+                                    <span>开放式</span>
+                                </div>
+                                <div class="example-item">
+                                    <img src="images/examples/kitchen-european.jpg" alt="欧式厨房">
+                                    <span>欧式风格</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="room-option" data-room="study">
+                            <img src="images/rooms/study.jpg" alt="书房">
+                            <h3>书房</h3>
+                            <div class="room-examples">
+                                <div class="example-item">
+                                    <img src="images/examples/study-modern.jpg" alt="现代书房">
+                                    <span>现代简约</span>
+                                </div>
+                                <div class="example-item">
+                                    <img src="images/examples/study-japanese.jpg" alt="日式书房">
+                                    <span>日式风格</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤2：风格选择 -->
+                <div class="step-content" id="step2">
+                    <h2>选择设计风格</h2>
+                    <div class="style-grid">
+                        <div class="product-card style-card" data-style="modern">
+                            <div class="product-image">
+                                <img src="images/styles/modern.jpg" alt="现代简约">
+                                <div class="product-overlay">
+                                    <h3>现代简约</h3>
+                                    <p>简洁大方，注重功能性的现代风格</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card style-card" data-style="nordic">
+                            <div class="product-image">
+                                <img src="images/styles/nordic.jpg" alt="北欧风格">
+                                <div class="product-overlay">
+                                    <h3>北欧风格</h3>
+                                    <p>自然舒适，温馨简约的北欧设计</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card style-card" data-style="chinese">
+                            <div class="product-image">
+                                <img src="images/styles/chinese.jpg" alt="新中式">
+                                <div class="product-overlay">
+                                    <h3>新中式</h3>
+                                    <p>传统与现代完美融合的东方美学</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤3：尺寸布局 -->
+                <div class="step-content" id="step3">
+                    <h2>输入房间尺寸</h2>
+                    <div class="dimensions-form">
+                        <div class="form-group">
+                            <label for="room-length">房间长度 (米)</label>
+                            <input type="number" id="room-length" step="0.1" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="room-width">房间宽度 (米)</label>
+                            <input type="number" id="room-width" step="0.1" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="room-height">房间高度 (米)</label>
+                            <input type="number" id="room-height" step="0.1" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requirements">特殊要求</label>
+                            <textarea id="special-requirements" rows="4" placeholder="请输入您的特殊要求或注意事项"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤4：材料选择 -->
+                <div class="step-content" id="step4">
+                    <h2>选择材料</h2>
+                    <div class="material-options">
+                        <div class="material-category">
+                            <h3 class="category-title">主要材料</h3>
+                            <div class="material-list">
+                                <div class="product-card material-item">
+                                    <div class="product-image">
+                                        <img src="images/materials/wood.jpg" alt="实木">
+                                        <div class="product-overlay">
+                                            <h4>实木</h4>
+                                            <p>天然环保，质地优良</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card material-item">
+                                    <div class="product-image">
+                                        <img src="images/materials/mdf.jpg" alt="中密度板">
+                                        <div class="product-overlay">
+                                            <h4>中密度板</h4>
+                                            <p>性价比高，稳定性好</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="material-category">
+                            <h3 class="category-title">表面处理</h3>
+                            <div class="material-list">
+                                <div class="product-card material-item">
+                                    <div class="product-image">
+                                        <img src="images/materials/paint.jpg" alt="烤漆">
+                                        <div class="product-overlay">
+                                            <h4>烤漆</h4>
+                                            <p>光滑亮丽，易于清洁</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card material-item">
+                                    <div class="product-image">
+                                        <img src="images/materials/veneer.jpg" alt="木皮">
+                                        <div class="product-overlay">
+                                            <h4>木皮</h4>
+                                            <p>自然纹理，质感细腻</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 步骤5：确认订单 -->
+                <div class="step-content" id="step5">
+                    <h2>确认订单信息</h2>
+                    <div class="order-details">
+                        <div class="detail-item">
+                            <span>选择房间：</span>
+                            <span id="selected-room">客厅</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>设计风格：</span>
+                            <span id="selected-style">现代简约</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>房间尺寸：</span>
+                            <span id="room-dimensions">4.5m × 3.8m × 2.8m</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>主要材料：</span>
+                            <span id="selected-materials">实木 + 烤漆处理</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>预估价格：</span>
+                            <span id="estimated-price">¥25,000 - ¥30,000</span>
+                        </div>
+                    </div>
+                    <button class="submit-order">提交订单</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>电话：400-123-4567</p>
+                <p>邮箱：contact@dreamhome.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <div class="social-links">
+                    <!-- 社交媒体图标 -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 梦想家居定制. 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+</html> 

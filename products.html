@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品展示 - 梦想家居定制</title>
+    <link rel="shortcut icon" href="ww.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="梦想家居">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="products.html" class="active">产品展示</a></li>
+                <li><a href="customize.html">在线定制</a></li>
+                <li><a href="gallery.html">案例展示</a></li>
+                <li><a href="cart.html">购物车</a></li>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header> 
+
+    <main>
+        <section class="product-filter">
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="">所有类别</option>
+                    <option value="bedroom">卧室家具</option>
+                    <option value="living">客厅家具</option>
+                    <option value="kitchen">厨房家具</option>
+                    <option value="study">书房家具</option>
+                </select>
+                <select id="price-filter">
+                    <option value="">价格区间</option>
+                    <option value="0-1000">1000元以下</option>
+                    <option value="1000-3000">1000-3000元</option>
+                    <option value="3000-5000">3000-5000元</option>
+                    <option value="5000+">5000元以上</option>
+                </select>
+                <select id="style-filter">
+                    <option value="">风格选择</option>
+                    <option value="modern">现代简约</option>
+                    <option value="european">欧式古典</option>
+                    <option value="chinese">中式传统</option>
+                    <option value="nordic">北欧风格</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="product-grid">
+            <!-- 产品卡片将通过JavaScript动态生成 -->
+        </section>
+
+        <div class="pagination">
+            <!-- 分页控件 -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>电话：400-123-4567</p>
+                <p>邮箱：contact@dreamhome.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <div class="social-links">
+                    <!-- 社交媒体图标 -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 梦想家居定制. 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html> 

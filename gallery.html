@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例展示 - 梦想家居定制</title>
+    <link rel="shortcut icon" href="ww.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="images/logo.png" alt="梦想家居">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="products.html">产品展示</a></li>
+                <li><a href="customize.html">在线定制</a></li>
+                <li><a href="gallery.html" class="active">案例展示</a></li>
+                <li><a href="cart.html">购物车</a></li>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery-header">
+            <h1>精选案例展示</h1>
+            <div class="gallery-filters">
+                <button class="room-btn active" data-room="all">全部</button>
+                <button class="room-btn" data-room="客厅">客厅</button>
+                <button class="room-btn" data-room="卧室">卧室</button>
+                <button class="room-btn" data-room="厨房">厨房</button>
+                <button class="room-btn" data-room="书房">书房</button>
+            </div>
+        </section>
+
+        <section class="gallery-grid">
+            <!-- 案例卡片将通过JavaScript动态生成 -->
+        </section>
+
+        <div class="case-modal" id="caseModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="case-details">
+                    <div class="case-images">
+                        <!-- 案例详细图片 -->
+                    </div>
+                    <div class="case-info">
+                        <h2></h2>
+                        <p class="case-description"></p>
+                        <div class="case-metadata">
+                            <p class="style"></p>
+                            <p class="area"></p>
+                            <p class="budget"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>联系我们</h4>
+                <p>电话：400-123-4567</p>
+                <p>邮箱：contact@dreamhome.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <div class="social-links">
+                    <!-- 社交媒体图标 -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 梦想家居定制. 保留所有权利</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html> 
